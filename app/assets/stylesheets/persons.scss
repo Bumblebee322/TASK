@@ -1,21 +1,18 @@
-#wrap {
+.profile_body {
     background-color: gray;
+    display: flex;
     width: 90%;
-    
+    margin: 0 auto;
 }
-
 .profile_page {
-    background-color: aqua;
-    margin-left: 10vh;
-    min-height: 90vh;
-    width: 50vh;
+    background-color: red;
+    min-height: 10%;
+    width: 25%;
     float: left;
 }
-
-.companies {
-    background-color:red;
-    height: 30vh;
+.companies{
     width: 60%;
-    float: left;
-    margin-left: 2%;
+    margin-left: 15%; 
+    float: right;
+    background-color: green;
 }

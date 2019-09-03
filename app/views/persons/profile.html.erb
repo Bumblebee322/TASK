@@ -1,4 +1,11 @@
-<center>
+<!DOCTYPE html>
+<html>
+
+<head>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
 
 <% if user_signed_in?%>
 
@@ -7,7 +14,7 @@
 <div class = 'profile_page'>
   
   
-    <h1 class = 'username' align = 'center'>username</h1><hr>
+    <h1 class = 'username' align = 'center'><%=current_user.username%></h1><hr>
   
     <div class = 'buttons'>
     <h1  align = 'center'>SELECT</h1>
@@ -16,7 +23,7 @@
     <button>RU</button>
     <button>EN</button>
     </form>
-
+  
      <form>
     <button>DELETE PROFILE</button>
     <button>CREATE CONPANY</button>
@@ -25,9 +32,10 @@
     
     <div class = 'achivments'>
      list of achivments
-    </div>
-  
-</div>
+   
+ </div> 
+      </div>
+
 <div class = 'companies'>
 sssssssssss
 </div>
@@ -45,4 +53,6 @@ sssssssssss
      
 
 <%end%>
-</center>
+</body>
+
+</html>
