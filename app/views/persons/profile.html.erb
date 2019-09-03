@@ -1,0 +1,48 @@
+<center>
+
+<% if user_signed_in?%>
+
+<div class = 'profile_body' id = 'wrap'>
+
+<div class = 'profile_page'>
+  
+  
+    <h1 class = 'username' align = 'center'>username</h1><hr>
+  
+    <div class = 'buttons'>
+    <h1  align = 'center'>SELECT</h1>
+    
+    <form>
+    <button>RU</button>
+    <button>EN</button>
+    </form>
+
+     <form>
+    <button>DELETE PROFILE</button>
+    <button>CREATE CONPANY</button>
+    </form>
+    </div>
+    
+    <div class = 'achivments'>
+     list of achivments
+    </div>
+  
+</div>
+<div class = 'companies'>
+sssssssssss
+</div>
+
+
+
+</div>
+
+  <% else %>
+    <h1>
+    You must be logged in to view this page.<br>
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    </h1> 
+    <br>
+     
+
+<%end%>
+</center>

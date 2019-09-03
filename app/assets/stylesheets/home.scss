@@ -1,0 +1,31 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+    background-color: gray;
+}
+
+header {
+    background-color: blue;
+    height: 10vh;
+}
+
+.title {
+   margin-left: 5vh;
+   margin-top: -3vh;
+   margin-right: 5vh;  
+   font-size: 3vh;
+}
+.header_but {
+    width: 30vh;
+    height: 6vh;
+    background-color:green;
+    margin-left: 120vh;
+    margin-top: -3vh;
+}
+.navbar-link{
+    margin-right: 5vh;
+    text-decoration: none;
+}

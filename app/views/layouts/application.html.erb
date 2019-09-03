@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<center>
+  <body>
+  
+  
+  <header>
+  <table>
+  <tr>
+  <th>
+
+    <div class = 'title'>
+      <h1>KEKstarter</h1>
+    <div>
+
+  </th>
+
+  <th>
+    <div class = 'search'>
+      <h3>TODO// entry tag</h3>
+    <div>
+  </th> 
+  <th>
+
+  <div class = 'header_but'>
+  <table> 
+  
+  <% if user_signed_in? %>
+  <tr>
+  <th>
+  <%=current_user.username %>
+  
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  </th>
+
+  </tr>
+  <% else %>
+  <tr>
+  <th>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> 
+  </th>
+  <th>
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  </th>
+  </tr>
+  <% end %>
+  
+  </table>
+  </div>
+
+  <th>
+  </tr>
+
+
+
+</table>
+
+
+
+
+  </header>
+  
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+  </center>
+</html>
