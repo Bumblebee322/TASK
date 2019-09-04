@@ -25,9 +25,9 @@
     </form>
   
      <form>
-    <button>DELETE PROFILE</button>
-    <button><a href = '../users/edit'>Edit</a></button>
-    <button>CREATE CONPANY</button>
+    <button><%= link_to "Edit profile", users_edit_path_url, :class => 'navbar-link'  %></button>
+    
+    <button><%= link_to "CREATE CONPANY", new_company_path, :class => 'navbar-link'  %></button>
     </form>
     </div>
     

@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  
+<h1>New Company</h1>
+
+<%= render 'form', company: @company %>
+
+<%= link_to 'Back', companies_path %>
+
+  <% else %>
+    <h1>
+    You must be logged in to view this page.<br>
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    </h1> 
+<% end %>
+     
