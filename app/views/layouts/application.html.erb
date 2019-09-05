@@ -6,13 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+      <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  
+  <center>
   
   <header>
   <table>
@@ -74,6 +74,7 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+    </center>
   </body>
 
 </html>
