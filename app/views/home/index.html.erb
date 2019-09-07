@@ -6,10 +6,31 @@
 </head>
 
 <body>
-<center>
-</center>
 
+<div class = 'top_rating'>
+<table align = 'center'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Short discription</th>
+      <th>Rating</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.title %></td>
+        <td><%= company.short_discription %></td>
+        <td><%= company.rating %></td>
+        <td><%= link_to 'Show', company %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+</div>
 
 </body>
 

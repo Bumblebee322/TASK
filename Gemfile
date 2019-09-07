@@ -23,7 +23,16 @@ gem 'omniauth'
 gem 'devise'
 gem 'pg'
 gem 'wdm', '>= 0.1.0'
-gem 'omniauth-facebook'
+
+gem 'omniauth-facebook', '~> 4.0'
+# Use Omniauth Github plugin
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
+# Use Omniauth Google plugin
+gem 'omniauth-google-oauth2', '~> 0.4.1'
+# Use Omniauth Twitter plugin
+gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+# Use ActiveRecord Sessions
+gem 'activerecord-session_store', '~> 1.0'
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -41,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv'
 end
 
 group :test do
