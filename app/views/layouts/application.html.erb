@@ -9,10 +9,14 @@
       <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+
+
   </head>
 
   <body>
-  <center>
+  
   
   <header>
   <table>
@@ -20,7 +24,7 @@
   <th>
 
     <div class = 'title'>
-      <h1>KEKstarter</h1>
+      <h1> <%= link_to "KEKstarter", root_url, :class => 'navbar-link', :style => 'text-decoration: none;'  %></h1>
     <div>
 
   </th>
@@ -35,6 +39,13 @@
   <div class = 'header_but'>
   <table class = 'header_table'> 
   
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
   <% if user_signed_in? %>
   <tr>
   <th>
@@ -74,7 +85,7 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
-    </center>
+    
   </body>
 
 </html>

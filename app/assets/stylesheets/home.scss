@@ -16,10 +16,30 @@ header {
 .header_but {
     width: 30vh;
     height: 6vh;
-    margin-left: 120vh;
+    margin-left: 80vh;
     margin-top: -3vh;
 }
 .navbar-link{
     margin-right: 5vh;
     text-decoration: none;
+}
+
+.companies_at_home { 
+    display: flex;
+    background-color: burlywood;
+    width: 90%;
+}
+
+.top_rating {
+    background-color: aqua;
+    width: 45%;
+}
+.last_10_updated_companies{
+    background-color: green;
+    width: 45%;
+    margin-left: 10%;
+}
+.company {
+    background-color: darkgoldenrod;
+    text-align: left;
 }

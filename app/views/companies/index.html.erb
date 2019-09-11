@@ -11,7 +11,8 @@
       <th>Discription</th>
       <th>Created by</th>
       <th>ID of creator</th>
-      <th colspan="5"></th>
+      <th>Goal</th>
+      <th colspan="6"></th>
     </tr>
   </thead>
 
@@ -23,6 +24,7 @@
         <td><%= company.discription %></td>
         <td><%= company.creator_name %></td>
         <td><%= company.creator_id %></td>
+        <td><%= company.goal %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>

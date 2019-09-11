@@ -6,15 +6,39 @@
 </head>
 
 <body>
+<div class = 'companies_at_home'>
+
 
 <div class = 'top_rating'>
+
+<h2>Top 10 companies</h2>
+
+    <% @companies.each do |company| %>
+    <div class = 'company'>
+
+        <h3> <%= company.title %> </h3>     
+        <h5><%= company.short_discription %></h5>
+        <h6><%= company.rating %></h6>
+        <h6><%= company.goal %></h6>
+        <h5 align = 'center'><%= link_to 'Show', company %></h5>
+    
+    </div>
+    <% end %>
+
+</div>
+
+
+<div class = 'last_10_updated_companies'>
+<h2>Last 10 updated companies</h2>
+<div class = 'company'>
 <table align = 'center'>
   <thead>
     <tr>
       <th>Title</th>
       <th>Short discription</th>
       <th>Rating</th>
-      <th colspan="2"></th>
+      <th>Goal</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -24,14 +48,17 @@
         <td><%= company.title %></td>
         <td><%= company.short_discription %></td>
         <td><%= company.rating %></td>
+        <td><%= company.goal %></td>
         <td><%= link_to 'Show', company %></td>
       </tr>
     <% end %>
   </tbody>
-
 </table>
+<div>
 </div>
 
+
+</div>
 </body>
 
 </html>

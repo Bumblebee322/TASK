@@ -44,11 +44,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Short discription</th>
-      <th>Discription</th>
-      <th>Created by</th>
-      <th>ID of creator</th>
-      <th colspan="5"></th>
+      <th>Created at</th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -57,10 +54,7 @@
       <tr>
       <% if current_user.id == company.creator_id %>
         <td><%= company.title %></td>
-        <td><%= company.short_discription %></td>
-        <td><%= company.discription %></td>
-        <td><%= company.creator_name %></td>
-        <td><%= company.creator_id %></td>
+        <td><%= company.created_at %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -82,7 +76,7 @@
     You must be logged in to view this page.<br>
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     </h1> 
-    <br>
+  <br>
      
 
 <%end%>

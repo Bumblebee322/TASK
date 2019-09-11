@@ -11,28 +11,21 @@
       </ul>
     </div>
   <% end %>
+  <h3 align = 'center'>We have: <br><%= @company.current_sum %>$/<%= @company.goal %>$
+<br>
+<br>
+<br>
+
+
+</h3> 
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :Donate %>
+    <%= form.text_field :current_donate %>
   </div>
+<div class="actions">
 
-  <div class="field">
-    <%= form.label :short_discription %>
-    <%= form.text_field :short_discription %>
-  </div>
-
-  <div class="field">
-    <%= form.label :discription %>
-    <%= form.text_area :discription %>
-  </div>
-
-  <div class="field">
-    <%= form.label :goal %>
-    <%= form.text_field :goal %>
-  </div>
-
-  <div class="actions">
     <%= form.submit %>
   </div>
+  
 <% end %>

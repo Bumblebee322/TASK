@@ -1,19 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @company.title %>
-</p>
 
-<p>
-  <strong>Short discription:</strong>
-  <%= @company.short_discription %>
-</p>
+<div class = 'show_company'>
 
-<p>
-  <strong>Discription:</strong>
+<h2 class = 'company_title' align = 'center'><%= @company.title %></h2>
+
+  
+<hr>
+<h3 align = 'center'>We have: <br><%= @company.current_sum %>$/<%= @company.goal %>$
+<br>
+<%= link_to 'Donate', edit_company_path(@company)%>
+
+
+</h3> 
+
+ <br><br>
+
+<div class = 'discription'>
+  
   <%= @company.discription %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+
+<center>
+<br>
+
+<% if user_signed_in? and current_user.id == @company.creator_id%>
+
+
+<form><button><%= link_to 'Edit', edit_company_path(@company) %></button></form> <br>
+
+<form><button><%= link_to 'Finish company', edit_company_path(@company) %></button></form> <br>
+
+
+<% else %>
+
+
+
+<% end %>
+</center>
+</div>
