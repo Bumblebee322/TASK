@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+  
+    models:
+      company:
+        'Компания'
+        
+    attributes:
+      company:
+        title: 'Название'
+        short_discription: 'Краткое описание'
+        discription: 'Описание'
+        goal: 'Цель'
+
+    errors:
+      messages:
+        blank: 'не может быть пустым'

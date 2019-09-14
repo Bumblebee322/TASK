@@ -1,0 +1,8 @@
+ru:
+  common:
+    errors: "При заполнении формы возникли ошибки"
+    create: "Создать"
+    back: 'Назад'
+  companies:
+    new:
+      title: 'Новая компания'

@@ -11,7 +11,7 @@
 
 <div class = 'top_rating'>
 
-<h2>Top 10 companies</h2>
+<h2 align = 'center'><%= t('Best 10 companies by rating') %></h2>
 
     <% @companies.each do |company| %>
     <div class = 'company'>
@@ -24,12 +24,13 @@
     
     </div>
     <% end %>
-
 </div>
 
 
+
+
 <div class = 'last_10_updated_companies'>
-<h2>Last 10 updated companies</h2>
+<h2  align = 'center'>Last 10 updated companies</h2>
 <div class = 'company'>
 <table align = 'center'>
   <thead>

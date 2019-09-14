@@ -12,27 +12,31 @@
     </div>
   <% end %>
 
+<table>
+<tr>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
+</tr>
   <div class="field">
     <%= form.label :short_discription %>
     <%= form.text_field :short_discription %>
   </div>
-
+<tr>
   <div class="field">
     <%= form.label :discription %>
     <%= form.text_area :discription %>
   </div>
-
+</tr>
   <div class="field">
     <%= form.label :goal %>
     <%= form.text_field :goal %>
   </div>
-
+<tr>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit  t('common.create')%>
   </div>
+</tr>
+</table> 
 <% end %>

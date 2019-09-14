@@ -2,11 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-header {
-    background-color: blue;
-    height: 10vh;
-}
-
+  
 .title {
    margin-left: 5vh;
    margin-top: -3vh;
@@ -16,26 +12,23 @@ header {
 .header_but {
     width: 30vh;
     height: 6vh;
-    margin-left: 80vh;
-    margin-top: -3vh;
-}
-.navbar-link{
-    margin-right: 5vh;
-    text-decoration: none;
+    margin-left: 65vh;
+    margin-top: 1vh; 
 }
 
 .companies_at_home { 
     display: flex;
-    background-color: burlywood;
+    margin: 0 auto;
     width: 90%;
 }
 
 .top_rating {
+    margin: 0 auto;
     background-color: aqua;
     width: 45%;
 }
 .last_10_updated_companies{
-    background-color: green;
+    
     width: 45%;
     margin-left: 10%;
 }

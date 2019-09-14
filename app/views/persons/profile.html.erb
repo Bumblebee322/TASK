@@ -14,16 +14,10 @@
 <div class = 'profile_page'>
   
   
-    <h1 class = 'username' align = 'center'><%=current_user.username%></h1><hr>
+    <h2 class = 'username' align = 'center'><%=current_user.username%></h2><hr>
   
     <div class = 'buttons'>
-    <h1  align = 'center'>SELECT</h1>
     
-    <form>
-    <button>RU</button>
-    <button>EN</button>
-    </form>
-  
      <form>
     <button><%= link_to "Edit profile", users_edit_path_url, :class => 'navbar-link'  %></button>
     

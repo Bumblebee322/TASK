@@ -1,10 +1,11 @@
+<center>
 <% if user_signed_in? %>
   
-<h1>New Company</h1>
+<h1><%=  t('companies.new.title')  %></h1>
 
 <%= render 'form', company: @company %>
 
-<%= link_to 'Back', companies_path %>
+<%= link_to t('common.back'), companies_path %>
 
   <% else %>
     <h1>
@@ -12,4 +13,4 @@
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     </h1> 
 <% end %>
-     
+</center>
