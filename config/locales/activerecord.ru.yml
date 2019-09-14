@@ -2,8 +2,9 @@ ru:
   activerecord:
   
     models:
-      company:
-        'Компания'
+      company: 'Компания'
+      user: 'Пользователь'
+
         
     attributes:
       company:
@@ -11,6 +12,11 @@ ru:
         short_discription: 'Краткое описание'
         discription: 'Описание'
         goal: 'Цель'
+      user:
+        email: 'Электронная почта'
+        password: 'Пароль'
+        remember_me: 'Запомнить меня'
+        
 
     errors:
       messages:

@@ -2,6 +2,25 @@ en:
   common:
       create: "Create"
       back: 'Back'
+      log_in: 'Log in'
+      home: 'Home page'
+      language: 'Language'
+      sign_up: 'Sign up'
+      profile: 'Profile'
+      log_out: 'Log out'
+      ru: 'Рус'
+      en: 'Eng'
+      forgot_password: 'Forgot your password?'
+      search: 'Search'
+      
   companies:
+    index:
+      title: 'Companies'
     new:
       title: 'New company'
+    show:
+      money: 'We have:'
+      edit: 'Edit'
+      finish: 'Finish company'
+      donate: 'Donate'
+      

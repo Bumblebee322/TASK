@@ -1,52 +1,33 @@
-<% if user_signed_in?%>
 <p id="notice"><%= notice %></p>
 
-<h1>Companies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Short discription</th>
-      <th>Discription</th>
-      <th>Created by</th>
-      <th>ID of creator</th>
-      <th>Goal</th>
-      <th colspan="6"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.title %></td>
-        <td><%= company.short_discription %></td>
-        <td><%= company.discription %></td>
-        <td><%= company.creator_name %></td>
-        <td><%= company.creator_id %></td>
-        <td><%= company.goal %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br>
+<br>
+<br>
+<h1 align = 'center'><%= t('companies.index.title')%></h1>
 
 <br>
-
-<%= link_to 'New Company', new_company_path %>
-
-<% else %>
-    <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.title %></td>
-        <td><%= company.short_discription %></td>
-        <td><%= company.discription %></td>
-      </tr>
-    <% end %>
-  </tbody>
 <br>
-     
-<%end%>
+
+<% @companies.each do |company| %>
+
+
+
+<div class = 'company_index'>
+
+
+<div class = 'company_title'><%=  company.title%></div>
+
+<div class = 'summary'>
+<p><%= company.short_discription %></p>
+</div>
+
+</div>
+<% end %>
+      
+
+
+
+  
+
+
+

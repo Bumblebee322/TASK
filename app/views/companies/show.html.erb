@@ -7,9 +7,9 @@
 
   
 <hr>
-<h3 align = 'center'>We have: <br><%= @company.current_sum %>$/<%= @company.goal %>$
+<h3 align = 'center'><%= t('companies.show.money')%><br><%= @company.current_sum %>$/<%= @company.goal %>$
 <br>
-<%= link_to 'Donate', edit_company_path(@company)%>
+<%= link_to t('companies.show.edit'), edit_company_path(@company)%>
 
 
 </h3> 
@@ -28,9 +28,9 @@
 <% if user_signed_in? and current_user.id == @company.creator_id%>
 
 
-<form><button><%= link_to 'Edit', edit_company_path(@company) %></button></form> <br>
+<form><button><%= link_to t('companies.show.edit'), edit_company_path(@company) %></button></form> <br>
 
-<form><button><%= link_to 'Finish company', edit_company_path(@company) %></button></form> <br>
+<form><button><%= link_to t('companies.show.finish'), edit_company_path(@company) %></button></form> <br>
 
 
 <% else %>

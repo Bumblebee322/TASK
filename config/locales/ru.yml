@@ -3,6 +3,27 @@ ru:
     errors: "При заполнении формы возникли ошибки"
     create: "Создать"
     back: 'Назад'
+    log_in: 'Войти'
+    home: 'Главная страница'
+    language: 'Язык'
+    sign_up: 'Зарегестрироваться'
+    profile: 'Профиль'
+    log_out: 'Выйти'
+    ru: 'Рус'
+    en: 'Eng'
+    forgot_password: 'Забыли пароль?'
+    search: 'Поиск'
+
   companies:
+    index:
+      title: 'Компании' 
     new:
       title: 'Новая компания'
+    show:
+      money: 'Мы собрали'
+      edit: 'Редактировать'
+      finish: 'Завершить сбор средств'
+      donate: 'Поддержать нас'
+  
+  
+  
