@@ -58,7 +58,7 @@ class CompaniesController < ApplicationController
   def update
     
     @company.current_sum += @company.current_donate
-    @company.current_donate = 0 
+    @company.current_donate = 0.0
      
     respond_to do |format|
 
@@ -72,7 +72,7 @@ class CompaniesController < ApplicationController
         format.json { render json: @company.errors, status: :unprocessable_entity }
       end
     end
-    @company.current_donate = 0.0
+    
   end
 
   # DELETE /companies/1
@@ -109,7 +109,7 @@ class CompaniesController < ApplicationController
         :creator_id,
         :current_donate,
         :current_sum,
-        :goal
+        :image
       )
     end
 end

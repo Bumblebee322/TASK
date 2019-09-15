@@ -10,9 +10,10 @@ en:
       log_out: 'Log out'
       ru: 'Рус'
       en: 'Eng'
+      update: 'Update'
       forgot_password: 'Forgot your password?'
       search: 'Search'
-      
+      creation_date: 'Company was created at: '
   companies:
     index:
       title: 'Companies'

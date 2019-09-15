@@ -1,29 +1,12 @@
 
 
-.company_index {
-    width: 90%;
-    margin: 0 auto;
-    
+.company{
+    margin-bottom: 10vh;
+    border-bottom: 1px solid lightblue;
 }
-.company_title{
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 3vh;
-    width: 100%;
-
+.company h2{
+    margin-bottom: 2vh;
 }
-.summary{
-    background-color: gray;
-    width: 100%;
-    float: left;
-    margin-bottom: 5vh;
-     
-}
-.summary p{
-    padding-top: 3%;
-    padding-bottom: 3%; 
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    word-wrap: break-word;
+.company-summary {
+    margin-top: 5vh;
 }

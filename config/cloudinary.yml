@@ -1,0 +1,6 @@
+production:
+  cloud_name: "dieebxi81"
+  api_key: "987587895617822"
+  api_secret: "987587895617822"
+  secure: true
+  cdn_subdomain: true

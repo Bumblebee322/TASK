@@ -8,24 +8,9 @@
 <br>
 <br>
 
-<% @companies.each do |company| %>
 
 
-
-<div class = 'company_index'>
-
-
-<div class = 'company_title'><%=  company.title%></div>
-
-<div class = 'summary'>
-<p><%= company.short_discription %></p>
-</div>
-
-</div>
-<% end %>
-      
-
-
+<%= render 'company', company: @company %>
 
   
 

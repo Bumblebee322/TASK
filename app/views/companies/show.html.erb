@@ -11,7 +11,7 @@
 <br>
 <%= link_to t('companies.show.edit'), edit_company_path(@company)%>
 
-
+<%= image_tag @company.image.url(:large), class: 'image-show' if @company.image? %>
 </h3> 
 
  <br><br>
@@ -35,8 +35,11 @@
 
 <% else %>
 
-
+<%= render 'donate', company: @company %>
 
 <% end %>
 </center>
 </div>
+
+
+

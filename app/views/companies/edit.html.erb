@@ -8,7 +8,7 @@
 
 <% elsif user_signed_in? and current_user.id != @company.creator_id%>
 <center>
-<%= render 'donate', company: @company %>
+
 <%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>
 </center>

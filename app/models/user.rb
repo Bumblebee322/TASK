@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :confirmable, :lockable, :timeoutable, :trackable,
          :omniauthable   #, omniauth_providers: [:facebook, :github, :google_oauth2, :twitter]
 
-  validates :username, presence: true, uniqueness: false
+  validates :username, presence: true, uniqueness: false, length: {minimum: 2, maximum: 20}
   validates :email, presence: true, uniqueness: true
 
 

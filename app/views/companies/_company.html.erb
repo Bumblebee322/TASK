@@ -1,0 +1,24 @@
+
+
+<% @companies.each do |company| %>
+<article class = 'company'> 
+    <section class = 'company-head'>
+    <h2><%=  link_to company.title, company_path(company) %></h2> 
+    
+    
+    
+    
+    
+    </section>
+    <small>
+        <time>
+        <%= t('common.creation_date')%>
+        <%= company.created_at.to_date.strftime("%d %B, %Y") %>
+        </time>
+    </small>
+    <section class = 'company-summary'>
+    <%= company.short_discription %>
+    </section>
+
+</article>
+<% end %>

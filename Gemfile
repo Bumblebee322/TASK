@@ -23,6 +23,14 @@ gem 'omniauth'
 gem 'devise'
 gem 'pg'
 gem 'wdm', '>= 0.1.0'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'cloudinary'
+gem 'carrierwave'
+gem "mini_magick"
+
+
 
 gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Github plugin

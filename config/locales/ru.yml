@@ -11,8 +11,10 @@ ru:
     log_out: 'Выйти'
     ru: 'Рус'
     en: 'Eng'
+    update: 'Внести изменения'
     forgot_password: 'Забыли пароль?'
     search: 'Поиск'
+    creation_date: 'Компания была создана:'
 
   companies:
     index:

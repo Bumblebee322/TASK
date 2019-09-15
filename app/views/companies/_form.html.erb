@@ -1,4 +1,4 @@
-<%= form_with(model: company, local: true) do |form| %>
+<%= form_for @company, html: {multipart: true}   do |form| %>
 
   <% if company.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +12,33 @@
     </div>
   <% end %>
 
-<table>
-<tr>
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
-</tr>
-  <div class="field">
+
+  <div class="form-group">
     <%= form.label :short_discription %>
-    <%= form.text_field :short_discription %>
+    <%= form.text_field :short_discription, class: 'form-control' %>
   </div>
-<tr>
-  <div class="field">
+
+  <div class="form-group">
     <%= form.label :discription %>
-    <%= form.text_area :discription %>
+    <%= form.text_area :discription, class: 'form-control' %>
   </div>
-</tr>
-  <div class="field">
+
+  <div class="form-group">
     <%= form.label :goal %>
-    <%= form.text_field :goal %>
+    <%= form.text_field :goal, class: 'form-control' %>
   </div>
-<tr>
-  <div class="actions">
-    <%= form.submit  t('common.create')%>
+
+
+  <div class="form-group">
+    <%= form.file_field :image, class: 'form-control' %>
   </div>
-</tr>
-</table> 
+
+  <div class="form-group">
+    <%= form.submit  t('common.update'), class: 'btn btn-primary'%>
+  </div>
+
 <% end %>

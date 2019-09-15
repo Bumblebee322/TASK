@@ -1,7 +1,7 @@
-<center>
+
 <% if user_signed_in? %>
   
-<h1><%=  t('companies.new.title')  %></h1>
+<h1 align = 'center' style = 'margin-top: 10vh;'><%=  t('companies.new.title')  %></h1>
 
 <%= render 'form', company: @company %>
 
@@ -13,4 +13,3 @@
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     </h1> 
 <% end %>
-</center>
