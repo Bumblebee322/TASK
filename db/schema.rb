@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_113659) do
+ActiveRecord::Schema.define(version: 2019_09_15_181647) do
 
 # Could not dump table "companies" because of following StandardError
 #   Unknown type 'real' for column 'goal'

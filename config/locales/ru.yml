@@ -14,7 +14,8 @@ ru:
     update: 'Внести изменения'
     forgot_password: 'Забыли пароль?'
     search: 'Поиск'
-    creation_date: 'Компания была создана:'
+    creation_date: 'Компания была создана: '
+    deadline: 'Компания будет завершена: '
 
   companies:
     index:
@@ -26,6 +27,7 @@ ru:
       edit: 'Редактировать'
       finish: 'Завершить сбор средств'
       donate: 'Поддержать нас'
+      finished: 'Компания завершена'
   
   
   

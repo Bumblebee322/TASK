@@ -2,6 +2,7 @@
 
 .company{
     margin-bottom: 10vh;
+    margin-top: 10vh;
     border-bottom: 1px solid lightblue;
 }
 .company h2{
@@ -9,4 +10,13 @@
 }
 .company-summary {
     margin-top: 5vh;
+}
+.thumb {
+    float: left;
+    margin-right: 1em;
+}
+.upload-img {
+    border: 1px solid gray;
+    height: 20vh;
+    
 }

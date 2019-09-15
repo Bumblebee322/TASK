@@ -23,17 +23,6 @@ class CompaniesController < ApplicationController
   def edit
   end
   
-  # POST /companies
-  # POST /companies.json
-
-
-
-
-
-
-
-
-
 
 
   def create
@@ -109,7 +98,8 @@ class CompaniesController < ApplicationController
         :creator_id,
         :current_donate,
         :current_sum,
-        :image
+        :image,
+        :deadline
       )
     end
 end
