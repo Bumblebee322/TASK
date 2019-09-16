@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-
+  has_many :comments
   mount_uploader :image, AvatarUploader
 
 

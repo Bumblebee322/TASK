@@ -16,6 +16,11 @@ en:
       creation_date: 'Company was created at: '
       deadline: 'Company will be finished at: '
       finished: 'Company is finished'
+      add_comment: 'Add comment'
+      comments: 'Comments'
+      comment: 'Comment'
+      add_comment: 'Create comment'
+      create: 'Create'
   companies:
     index:
       title: 'Companies'

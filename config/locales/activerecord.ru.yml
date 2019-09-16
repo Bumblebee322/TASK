@@ -4,6 +4,7 @@ ru:
     models:
       company: 'Компания'
       user: 'Пользователь'
+      comment: 'Коментарий'
 
         
     attributes:
@@ -16,7 +17,6 @@ ru:
         email: 'Электронная почта'
         password: 'Пароль'
         remember_me: 'Запомнить меня'
-        
 
     errors:
       messages:

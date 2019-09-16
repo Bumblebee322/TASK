@@ -16,7 +16,12 @@ ru:
     search: 'Поиск'
     creation_date: 'Компания была создана: '
     deadline: 'Компания будет завершена: '
+    add_comment: 'Добавить коментарий'
+    comments: 'Коментарии'
+    comment: 'Коментарий'
+    add_comment: 'Создать коментарий'
 
+    
   companies:
     index:
       title: 'Компании' 

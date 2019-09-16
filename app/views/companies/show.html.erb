@@ -10,12 +10,7 @@
     <section class = 'company-head'>
     
     <h2><%=   @company.title %></h2> 
-    <ul class = 'rating'> 
-    <% (1..5).each do |i|%>
-    <li class = 'rating_star' id = <%=  "#{@company.id}_#{}" %>>    </li>
-    <% end %>
-    <ul>
- 
+    
      <h5>
      
      <%=   @company.current_sum %>$/<%=   @company.goal %>$
@@ -46,16 +41,43 @@
 
 
 
-<% else %>
-<% if @company.deadline.to_date.strftime("%d %B, %Y") !=  @company.created_at.to_date.strftime("%d %B, %Y")%>
-<%= render 'donate', company: @company %>
-<% else %>
-<h2><%=  t('companies.show.finished')%></h2> 
+    <% else %>
+
+    <% if @company.deadline.to_date.strftime("%d %B, %Y") !=  @company.created_at.to_date.strftime("%d %B, %Y")%>
+
+    
+    <%= render 'donate', company: @company %>
+    
+    <% else %>
+    
+    <h2><%=  t('companies.show.finished')%></h2> 
+
+
+    <% end %>
 
 
 <% end %>
 
+<%= form_for ([@company, @company.comments.build])  do |form| %>
 
+ 
+<h2><%= t('common.add_comment')%></h2>
+
+  <div class="form-group">
+    <%= form.text_area :body, class: 'form-control' %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.submit  t('common.add_comment'), class: 'btn btn-primary'%>
+  </div>
+
+<h2><%= t('common.comments')%></h2>
+<% @company.comments.each do |comment| %>
+    <div class = 'comment'>
+    
+   <h5> <%= comment.body %></h5>     
+    <h6><%= comment.username%></h6>
+    </div>
+    <% end %>
 <% end %>
-
-
