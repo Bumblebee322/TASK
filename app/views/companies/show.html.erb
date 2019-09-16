@@ -43,9 +43,15 @@
 
     <% else %>
 
-    <% if @company.deadline.to_date.strftime("%d %B, %Y") !=  @company.created_at.to_date.strftime("%d %B, %Y")%>
 
-    
+<% end %>
+
+<%= form_for ([@company, @company.comments.build])  do |form| %>
+
+<% if user_signed_in? %> 
+
+    <% if @company.deadline.to_date.strftime("%d %B, %Y") !=  Time.now.strftime("%d %B, %Y")%>
+
     <%= render 'donate', company: @company %>
     
     <% else %>
@@ -55,12 +61,6 @@
 
     <% end %>
 
-
-<% end %>
-
-<%= form_for ([@company, @company.comments.build])  do |form| %>
-
- 
 <h2><%= t('common.add_comment')%></h2>
 
   <div class="form-group">
@@ -71,7 +71,7 @@
   <div class="form-group">
     <%= form.submit  t('common.add_comment'), class: 'btn btn-primary'%>
   </div>
-
+<% end %>
 <h2><%= t('common.comments')%></h2>
 <% @company.comments.each do |comment| %>
     <div class = 'comment'>
