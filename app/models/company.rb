@@ -1,8 +1,7 @@
 class Company < ApplicationRecord
   has_many :comments
-  mount_uploader :image, AvatarUploader
 
-
+  has_many_attached :images 
 
   validates :discription, presence: true, uniqueness: false#, length: {minimum: 120}
   validates :goal, presence: true, uniqueness: false, numericality: {only_real: true}

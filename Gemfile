@@ -29,8 +29,8 @@ gem 'popper_js'
 gem 'cloudinary'
 gem 'carrierwave'
 gem "mini_magick"
-
-
+gem 'activestorage'
+gem "aws-sdk-s3", require: false
 
 gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Github plugin

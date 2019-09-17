@@ -28,7 +28,15 @@
 
     
     <section class = 'company-summary clearfix'>
-    <%= image_tag @company.image.url(:large), class: 'img-thumbnail thumb' if @company.image? %>
+
+
+    <% if @company.images.attached? %>
+    <% @company.images.each do |image| %>
+    <%= image_tag(image, width:400 , height: 600) %>
+
+    <%end%>
+    <%end%>
+    
     <%= @company.discription %>
     </section><br> <br>
  <% if user_signed_in? and current_user.id == @company.creator_id%>  
@@ -52,7 +60,7 @@
 
     <% if @company.deadline.to_date.strftime("%d %B, %Y") !=  Time.now.strftime("%d %B, %Y")%>
 
-    <%= render 'donate', company: @company %>
+    
     
     <% else %>
     
@@ -60,6 +68,7 @@
 
 
     <% end %>
+
 
 <h2><%= t('common.add_comment')%></h2>
 
@@ -71,13 +80,33 @@
   <div class="form-group">
     <%= form.submit  t('common.add_comment'), class: 'btn btn-primary'%>
   </div>
+
+
 <% end %>
+
+
 <h2><%= t('common.comments')%></h2>
+
 <% @company.comments.each do |comment| %>
-    <div class = 'comment'>
+
+<article class = 'company'> 
+
     
-   <h5> <%= comment.body %></h5>     
-    <h6><%= comment.username%></h6>
-    </div>
-    <% end %>
+
+    <section class = 'company-summary'>
+    <%= comment.body %>
+    </section><br><br>
+    <small style = 'float: right;'>
+        <time>
+        <%= comment.username%><br>
+        <%= comment.created_at %>
+        
+        </time>
+    </small>
+</article>
+
+
+
+<% end %>
+
 <% end %>

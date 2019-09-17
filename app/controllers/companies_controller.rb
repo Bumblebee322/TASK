@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   
-  before_action :set_company, only: [:show, :edit, :update, :destroy, :donate]
+  before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies
   # GET /companies.json
@@ -30,7 +30,7 @@ class CompaniesController < ApplicationController
     @company = Company.new(company_params)
     @company.creator_name = current_user.username
     @company.creator_id = current_user.id
-
+    
     respond_to do |format|
       if @company.save
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
@@ -48,7 +48,10 @@ class CompaniesController < ApplicationController
     
     @company.current_sum += @company.current_donate
     @company.current_donate = 0.0
-     
+    
+    
+    
+    
     respond_to do |format|
 
       if @company.update(company_params)
@@ -93,13 +96,12 @@ class CompaniesController < ApplicationController
         :short_discription, 
         :discription,
         :goal,
-
         :creator_name,
         :creator_id,
         :current_donate,
         :current_sum,
-        :image,
-        :deadline
-      )
+        :deadline,
+        images: []
+       )
     end
 end

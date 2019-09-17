@@ -3,7 +3,7 @@
 .company{
     margin-bottom: 10vh;
     margin-top: 10vh;
-    border-bottom: 1px solid lightblue;
+    border-bottom: 2px solid black;
 }
 .company h2{
     margin-bottom: 2vh;
@@ -19,6 +19,17 @@
     border: 1px solid gray;
     height: 20vh;   
 }
+.comments {
+   // background-color: lightgray;
+    min-height: 10vh;
+    margin-bottom: 5vh;
+}
 .comment {
-    background-color: lightgray;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+}
+.creation-info {
+    font-size: 15px;
+    float: right;
 }
