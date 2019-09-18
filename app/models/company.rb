@@ -1,6 +1,7 @@
 class Company < ApplicationRecord
   has_many :comments
-
+  has_many :news 
+  
   has_many_attached :images 
 
   validates :discription, presence: true, uniqueness: false#, length: {minimum: 120}

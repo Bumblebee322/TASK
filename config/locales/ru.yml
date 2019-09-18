@@ -21,6 +21,8 @@ ru:
     comment: 'Коментарий'
     add_comment: 'Создать коментарий'
     was_created: 'был создан'
+    add_post: 'Добавить новость'
+    news: 'Новости'
 
   companies:
     index:

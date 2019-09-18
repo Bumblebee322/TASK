@@ -21,6 +21,8 @@ en:
       comment: 'Comment'
       add_comment: 'Create comment'
       was_created: 'was created by'
+      add_post: 'Add post'
+      news: 'News'
   companies:
     _form: 
       deadline: 'Дата окончания сбора средств'

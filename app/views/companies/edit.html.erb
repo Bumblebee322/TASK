@@ -1,5 +1,6 @@
 <% if user_signed_in? and current_user.id == @company.creator_id%>
-<h1>Editing Company</h1>
+<br>
+<h1 >Editing Company</h1>
 
 <%= render 'form', company: @company %>
 

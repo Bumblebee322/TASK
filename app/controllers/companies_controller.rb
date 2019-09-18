@@ -46,8 +46,12 @@ class CompaniesController < ApplicationController
   # PATCH/PUT /companies/1.json
   def update
     
-    @company.current_sum += @company.current_donate
-    @company.current_donate = 0.0
+
+    if @company.current_donate > 0
+      @company.current_sum += @company.current_donate
+      @company.current_donate = 0.0
+    
+    end
     
     
     
