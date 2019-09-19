@@ -7,6 +7,14 @@
     <article class = 'company'> 
     <section class = 'company-head'>  
       <h2><%=   @company.title %></h2> 
+      
+      <div class="progress-bar-wrapper">
+
+        <div class="progress-bar" style="width: <%= progress %>%;"></div>
+      
+      </div>
+
+
       <h5>
       <%=   @company.current_sum %>$/<%=   @company.goal %>$
       </h5> 
@@ -50,7 +58,7 @@
           </div>
           <div class="form-group">
   
-            <%= form.file_field :images, multiple: false, class: 'upload-img', style:'border: 1px solid black;' %>
+            <%= form.file_field :image,  class: 'upload-img', style:'border: 1px solid black;' %>
 
           </div>
           <div class="form-group">
@@ -132,6 +140,11 @@
     <article class = 'company'>     
          <section class = 'company-head'>
     <h2><%=  post.title %></h2> 
+     <% if post.image.attached? %>
+      
+      <%= image_tag(post.image, :class => "img-thumbnail thumb", style: 'height: 100px; width 70px;')%>
+      
+      <%end%>
         </section>
 
 

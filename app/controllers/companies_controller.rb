@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [:show, :edit, :update, :destroy, :progress]
 
   # GET /companies
   # GET /companies.json
@@ -9,6 +9,10 @@ class CompaniesController < ApplicationController
     @companies = Company.all
   end
 
+  def progress
+     (@company.current_sum / @company.goal) * 100
+  end
+  helper_method :progress
   # GET /companies/1
   # GET /companies/1.json
   def show
