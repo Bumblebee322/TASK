@@ -13,6 +13,10 @@
 .company-summary {
     margin-top: 5vh;
 }
+.comment-summary {
+    margin-top: 5vh;
+    margin-bottom: -4vh;
+}
 .thumb {
     
     margin-right: 1em;
@@ -21,15 +25,9 @@
     border: 1px solid gray;
     height: 20vh;   
 }
+
 .comments {
-   // background-color: lightgray;
-    min-height: 10vh;
-    margin-bottom: 5vh;
-}
-.comment {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 3vh;
+    
 }
 .creation-info {
     font-size: 15px;
@@ -53,4 +51,9 @@
     margin-bottom: 10vh;
     margin-top: 10vh;
     border-bottom: 2px solid black;
+}
+.comment-hr {
+    border-bottom: 2px solid black; 
+    width: 100%;
+    margin-bottom: 7vh;
 }
