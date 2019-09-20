@@ -21,6 +21,9 @@
                 <b> <%= @company.deadline.to_date.strftime("%d %B, %Y") %> </b>
                   </time>
               </small><br>
+
+
+
               <% if @company.images.attached? %>
               <% @company.images.each do |image| %>
               <%= image_tag(image, :class => "img-thumbnail thumb", style: 'height: 400px; width 300px;')%>
@@ -29,6 +32,11 @@
               
 
               <%end%>
+              
+
+
+
+
               
               <%= @company.discription %>
               

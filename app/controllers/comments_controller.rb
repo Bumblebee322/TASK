@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
     def create
     
         @company = Company.find(params[:company_id])
-        @comment = @company.comments.new(comment_params)
+        @comment = @company.comments.create(comment_params)
         @comment.username = current_user.username
         
         respond_to do |format|
@@ -15,6 +15,8 @@ class CommentsController < ApplicationController
             end
           end
       end
+      
+      
 
 
     private def comment_params

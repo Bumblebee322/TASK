@@ -1,19 +1,6 @@
-.profile_body {
-    
-    display: flex;
-    width: 90%;
+.profile_page_body {
+    min-height: 100vh;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 10vh;
-}
-.profile_page {
-    background-color: red;
-    min-height: 10%;
-    width: 25%;
-    float: left;
-}
-.companies{
-    width: 60%;
-    margin-left: 15%; 
-    float: right;
-    background-color: white;
+    background-color: #b8b8b8;
 }

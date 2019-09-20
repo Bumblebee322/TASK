@@ -5,69 +5,14 @@
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body class = 'profile_page_body'>
 
 <% if user_signed_in?%>
 
-<div class = 'profile_body' id = 'wrap'>
-
-<div class = 'profile_page'>
-  
-  
-    <h2 class = 'username' align = 'center'><%=current_user.username%></h2><hr>
- 
-    <div class = 'buttons'>
-    
-     <form>
-    <button><%= link_to "Edit profile", users_edit_path_url, :class => 'navbar-link'  %></button>
-    
-    <button><%= link_to "CREATE CONPANY", new_company_path, :class => 'navbar-link'  %></button>
-    </form>
-    </div>
-    
-    <div class = 'achivments'>
-     list of achivments
-   
- </div> 
-      </div>
-
-<div class = 'companies'>
-      <h1> list of your companies </h1>
-
-  <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Created at</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-      <% if current_user.id == company.creator_id %>
-        <td><%= company.title %></td>
-        <td><%= company.created_at %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <%end%>
-      </tr>
-    <% end %>
-  </tbody>
-
-</table>
-
-</div>
-
-
-
-</div>
 
   <% else %>
     <h1>
-    You must be logged in to view this page.<br>
+    You must be logged in to view profile page.<br>
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     </h1> 
   <br>

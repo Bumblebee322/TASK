@@ -1,7 +1,7 @@
 
 
 <% @companies.each do |company| %>
-<article class = 'company'> 
+<article class = 'company' style = 'border-bottom: 2px solid black;'> 
     <section class = 'company-head'>
     <h2><%=  link_to company.title, company_path(company) %></h2> 
     

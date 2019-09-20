@@ -23,6 +23,7 @@ en:
       was_created: 'was created by'
       add_post: 'Add post'
       news: 'News'
+      sign_uping: 'Sign up'
   companies:
     _form: 
       deadline: 'Дата окончания сбора средств'

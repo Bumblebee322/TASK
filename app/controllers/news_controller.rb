@@ -3,7 +3,7 @@ class NewsController < ApplicationController
     def create
     
       @company = Company.find(params[:company_id])
-      @news = @company.news.new(news_params)
+      @news = @company.news.create(news_params)
       
       puts(@news.image,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
       

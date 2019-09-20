@@ -23,6 +23,7 @@ ru:
     was_created: 'был создан'
     add_post: 'Добавить новость'
     news: 'Новости'
+    sign_uping: 'Регистрация'
 
   companies:
     index:
