@@ -19,5 +19,3 @@ require("channels")
 
 
 //= require bootstrap-sprockets
-
-
