@@ -23,7 +23,10 @@ en:
       was_created: 'was created by'
       add_post: 'Add post'
       news: 'News'
+      support_us: 'Support us'
       sign_uping: 'Sign up'
+      donate: 'donate'
+      
   companies:
     _form: 
       deadline: 'Дата окончания сбора средств'
@@ -32,6 +35,7 @@ en:
     new:
       title: 'New company'
     show:
+      support: 'Support'
       money: 'We have:'
       edit: 'Edit'
       finish: 'Finish company'

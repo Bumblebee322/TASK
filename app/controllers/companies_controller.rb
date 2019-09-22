@@ -26,7 +26,11 @@ class CompaniesController < ApplicationController
   # GET /companies/1/edit
   def edit
   end
-  
+
+  def donate
+    puts('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+  end
+  #helper_method :donate
 
 
   def create
@@ -50,9 +54,9 @@ class CompaniesController < ApplicationController
   # PATCH/PUT /companies/1.json
   def update
     
-
-    if @company.current_donate > 0
-      @company.current_sum += @company.current_donate
+    puts(params,'!!!!!!!!!!!!!!!!!!!!!!!!')
+    if @company.current_donate >= 0
+      @company.current_sum += @company.current_donate 
       @company.current_donate = 0.0
     
     end
@@ -64,7 +68,7 @@ class CompaniesController < ApplicationController
 
       if @company.update(company_params)
         
-        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to @company}
         format.json { render :show, status: :ok, location: @company }
       else
 
@@ -91,9 +95,13 @@ class CompaniesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_company
-      
+      puts(params,'!!!!!!!!!!!!!!!!!!!!')
       @company = Company.find(params[:id])
-      
+    begin
+      @donate = @company.donates.find(params[:format])
+      @company.current_donate = @donate.cost
+    rescue   
+    end
       
     end
 

@@ -1,6 +1,7 @@
 class Company < ApplicationRecord
   has_many :comments
   has_many :news 
+  has_many :donates
   
   has_many_attached :images 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_122159) do
+ActiveRecord::Schema.define(version: 2019_09_21_194102) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 2019_09_17_122159) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "average_caches", force: :cascade do |t|
+    t.integer "rater_id"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "avg", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rateable_type", "rateable_id"], name: "index_average_caches_on_rateable_type_and_rateable_id"
+    t.index ["rater_id"], name: "index_average_caches_on_rater_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "username"
     t.text "body"
@@ -45,6 +56,9 @@ ActiveRecord::Schema.define(version: 2019_09_17_122159) do
 # Could not dump table "companies" because of following StandardError
 #   Unknown type 'real' for column 'goal'
 
+# Could not dump table "donates" because of following StandardError
+#   Unknown type 'real' for column 'cost'
+
   create_table "news", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -52,6 +66,40 @@ ActiveRecord::Schema.define(version: 2019_09_17_122159) do
     t.integer "company_id", null: false
     t.string "title", limit: 50, default: "", null: false
     t.index ["company_id"], name: "index_news_on_company_id"
+  end
+
+  create_table "overall_averages", force: :cascade do |t|
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "overall_avg", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rateable_type", "rateable_id"], name: "index_overall_averages_on_rateable_type_and_rateable_id"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "rater_id"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "stars", null: false
+    t.string "dimension"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type"
+    t.index ["rateable_type", "rateable_id"], name: "index_rates_on_rateable_type_and_rateable_id"
+    t.index ["rater_id"], name: "index_rates_on_rater_id"
+  end
+
+  create_table "rating_caches", force: :cascade do |t|
+    t.string "cacheable_type"
+    t.integer "cacheable_id"
+    t.float "avg", null: false
+    t.integer "qty", null: false
+    t.string "dimension"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+    t.index ["cacheable_type", "cacheable_id"], name: "index_rating_caches_on_cacheable_type_and_cacheable_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -94,5 +142,6 @@ ActiveRecord::Schema.define(version: 2019_09_17_122159) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "companies"
+  add_foreign_key "donates", "companies"
   add_foreign_key "news", "companies"
 end

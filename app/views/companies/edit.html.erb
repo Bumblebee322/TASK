@@ -1,3 +1,4 @@
+  
 <% if user_signed_in? and current_user.id == @company.creator_id%>
 <br>
 <h1 >Editing Company</h1>
@@ -12,6 +13,9 @@
 
 <%= link_to 'Show', @company %> |
 <%= link_to 'Back', companies_path %>
+
+<%= render 'donate', company: @company %>
+
 </center>
 <% else %>
   <h1>
