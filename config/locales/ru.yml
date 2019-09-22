@@ -3,7 +3,7 @@ ru:
     errors: "При заполнении формы возникли ошибки"
     create: "Создать"
     back: 'Назад'
-    log_in: 'Вход'
+    log_in: 'Войти'
     home: 'Главная страница'
     language: 'Язык'
     sign_up: 'Зарегестрироваться'
@@ -27,6 +27,7 @@ ru:
     sign_uping: 'Регистрация'
     donate: 'Пожертвовать' 
     create_company: 'Создать компанию'
+    companies_with_tag: 'Компании с тэгом: '
   will_paginate:
     previous_label: '<'
     next_label: '>'

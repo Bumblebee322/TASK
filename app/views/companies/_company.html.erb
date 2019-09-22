@@ -1,6 +1,6 @@
 
 
-<% @companies.each do |company| %>
+<% @companies.order('updated_at DESC').each do |company| %>
 <article class = 'company' style = 'border-bottom: 2px solid black;'> 
     <section class = 'company-head'>
     <h2><%=  link_to company.title, company_path(company) %></h2> 
@@ -19,6 +19,9 @@
     <section class = 'company-summary'>
     <%= company.short_discription %>
     </section>
+     <section class="footer-summary">
+    <%= raw company.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary' }.join(' ') %>
+     </section>
 
 </article>
 <% end %>

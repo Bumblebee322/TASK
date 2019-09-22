@@ -1,0 +1,14 @@
+<h1 style = 'margin-top: 10vh; ' align='center'>
+<%= t('common.companies_with_tag')%><br>
+<h1 style = 'color:green;' align='center'>
+<%= @tag.name %></h1>
+</h1>
+<% if @tag.companies.empty?%>
+<h2>No companies</h2>
+<%else%>
+<%= render @tag.companies %>
+
+<%= will_paginate @companies, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
+  
+
+<%end%>

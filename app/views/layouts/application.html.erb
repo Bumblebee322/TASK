@@ -60,7 +60,7 @@
           </div>
         </div>
       </li>
-      
+
       <%else%>
       
       <li class="nav-item">
@@ -88,6 +88,12 @@
     <p class="alert"><%= alert %></p>
 
   <div class = 'container'>
+        <div class="tag_cloud" >
+                  <h2><%= t('common.tags')%></h2>
+                  <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
+                    <%= link_to tag.name, tag_path(tag.name), class: 'badge badge-primary', style: 'font-size: 15px;' %>
+                  <% end %>
+      </div>
     <%= yield %>
   </div>
   </body>

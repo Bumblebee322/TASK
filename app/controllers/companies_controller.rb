@@ -122,6 +122,7 @@ class CompaniesController < ApplicationController
         :current_donate,
         :current_sum,
         :deadline,
+        :all_tags,
         images: []
        )
     end

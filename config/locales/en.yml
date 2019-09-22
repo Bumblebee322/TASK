@@ -13,9 +13,9 @@ en:
       update: 'Update'
       forgot_password: 'Forgot your password?'
       search: 'Search'
-      creation_date: 'Company was created at: '
-     # deadline: 'Company will be finished at: '
-      finished: 'Company is finished'
+      creation_date: 'Compagny was created at: '
+      deadline: 'Compagny will be finished at: '
+      finished: 'Compagny is finished'
       add_comment: 'Add comment'
       comments: 'Comments'
       comment: 'Comment'
@@ -26,22 +26,23 @@ en:
       support_us: 'Support us'
       sign_uping: 'Sign up'
       donate: 'donate'
-      create_company: 'Create company'
+      create_company: 'Create compagny'
+      companies_with_tag: 'Compagnies with tag: '
   will_paginate:
     previous_label: '<'
     next_label: '>'    
   companies:
     _form: 
-     # deadline: 'Дата окончания сбора средств'
+      deadline: 'Дата окончания сбора средств'
     index:
-      title: 'Companies'
+      title: 'Compagnies'
     new:
-      title: 'New company'
+      title: 'New compagny'
     show:
       support: 'Support'
       money: 'We have:'
       edit: 'Edit'
-      finish: 'Finish company'
+      finish: 'Finish compagny'
       donate: 'Donate'
   date:
     formats:
