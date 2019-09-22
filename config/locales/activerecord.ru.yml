@@ -13,7 +13,7 @@ ru:
         short_discription: 'Краткое описание'
         discription: 'Описание'
         goal: 'Цель'
-        deadline: 'Дата окончания сбора средств'
+        #deadline: 'Дата окончания сбора средств'
       user:
         email: 'Электронная почта'
         password: 'Пароль'

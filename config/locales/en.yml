@@ -14,7 +14,7 @@ en:
       forgot_password: 'Forgot your password?'
       search: 'Search'
       creation_date: 'Company was created at: '
-      deadline: 'Company will be finished at: '
+     # deadline: 'Company will be finished at: '
       finished: 'Company is finished'
       add_comment: 'Add comment'
       comments: 'Comments'
@@ -26,10 +26,13 @@ en:
       support_us: 'Support us'
       sign_uping: 'Sign up'
       donate: 'donate'
-      
+      create_company: 'Create company'
+  will_paginate:
+    previous_label: '<'
+    next_label: '>'    
   companies:
     _form: 
-      deadline: 'Дата окончания сбора средств'
+     # deadline: 'Дата окончания сбора средств'
     index:
       title: 'Companies'
     new:
@@ -40,4 +43,20 @@ en:
       edit: 'Edit'
       finish: 'Finish company'
       donate: 'Donate'
-   
+  date:
+    formats:
+      default: "%Y-%m-%d"
+    month:
+      - 
+      - jan.
+      - fév.
+      - mar.
+      - avr.
+      - mai
+      - juin
+      - juil.
+      - août
+      - sept.
+      - oct.
+      - nov.
+      - déc.

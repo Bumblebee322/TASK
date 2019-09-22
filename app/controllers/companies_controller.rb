@@ -6,11 +6,21 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   
   def index
-    @companies = Company.all
+    @companies = Company.paginate(page: params[:page], per_page: 3)
   end
 
+
+
+
   def progress
-     (@company.current_sum / @company.goal) * 100
+      a = (@company.current_sum / @company.goal) * 100
+      if a <= 100
+        return a 
+      else
+        a = 100
+        return a
+      end
+     
   end
   helper_method :progress
   # GET /companies/1
@@ -26,11 +36,6 @@ class CompaniesController < ApplicationController
   # GET /companies/1/edit
   def edit
   end
-
-  def donate
-    puts('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-  end
-  #helper_method :donate
 
 
   def create

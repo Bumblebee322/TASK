@@ -13,7 +13,6 @@ module Kekstarter
     config.i18n.available_locales = [:ru, :en]
     config.i18n.default_locale = :ru
 
-
    
   end
 end

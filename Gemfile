@@ -32,7 +32,7 @@ gem 'activestorage'
 gem "aws-sdk-s3", require: false
 gem 'flex-slider-rails'
 gem 'jquery-turbolinks'
-
+gem 'will_paginate'
 
 gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Github plugin

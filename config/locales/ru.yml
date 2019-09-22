@@ -3,7 +3,7 @@ ru:
     errors: "При заполнении формы возникли ошибки"
     create: "Создать"
     back: 'Назад'
-    log_in: 'Войти'
+    log_in: 'Вход'
     home: 'Главная страница'
     language: 'Язык'
     sign_up: 'Зарегестрироваться'
@@ -26,6 +26,10 @@ ru:
     support_us: 'Поддержать нас'
     sign_uping: 'Регистрация'
     donate: 'Пожертвовать' 
+    create_company: 'Создать компанию'
+  will_paginate:
+    previous_label: '<'
+    next_label: '>'
   companies:
     index:
       title: 'Компании' 
@@ -37,7 +41,15 @@ ru:
       finish: 'Завершить сбор средств'
       donate: 'Поддержать нас'
       finished: 'Компания завершена'
-  
+  devise:
+    sessions:
+      user:
+        signed_in: 'Вход произведён успешно'
   date:
     order: 'Дата окончания сбора средств'
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    
   

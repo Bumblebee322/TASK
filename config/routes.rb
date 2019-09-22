@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   scope '/(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
 
     devise_for :users, skip: :omniauth_callbacks
-    root 'home#index'
+    root 'companies#index'
     get 'persons/profile', as: 'user_root'
     get 'users/edit', as: 'users_edit_path'
     

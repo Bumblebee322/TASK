@@ -2,19 +2,18 @@
 .company h2{
     margin-bottom: 2vh;
 }
-.company-summary {
-    margin-top: 5vh;
-}
+
 .comment-summary {
     margin-top: 5vh;
     margin-bottom: -4vh;
+    overflow: hidden; 
+    word-break: break-all;
 }
 .thumb {
     
     margin-right: 1em;
 }
 .upload-img {
-    border: 1px solid gray;
     height: 20vh;   
 }
 .comments {
@@ -41,6 +40,8 @@
 .company{
     margin-bottom: 10vh;
     margin-top: 10vh;
+    overflow: hidden; 
+    word-break: break-all;
   //  border-bottom: 2px solid black;
 }
 .comment-hr {
