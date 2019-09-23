@@ -19,6 +19,14 @@
     <section class = 'company-summary'>
     <%= company.short_discription %>
     </section>
+     <% if user_signed_in?%>
+        <% if company.creator_id == current_user.id or current_user.admin?%>
+        <%= link_to t('common.edit'), edit_company_path(company) %>
+        <%= link_to t('destroy'), company, method: :delete, data: { confirm: t('common.destroy_comfirm') } %>
+        
+        <%end%>
+     <%end%>
+
      <section class="footer-summary">
     <%= raw company.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary' }.join(' ') %>
      </section>

@@ -28,6 +28,14 @@ en:
       donate: 'donate'
       create_company: 'Create compagny'
       companies_with_tag: 'Compagnies with tag: '
+      edit_profile: 'Edit profile'
+      tags: 'Tags'
+      characters_minimum: 'characters minimum'
+      comfirm_changes: '(we need your current password to confirm your changes)'
+      update_account: 'Update account'
+      destroy_account: 'Destroy account'
+      destroy_comfirm: 'Are you sure?'    
+      cancel_account: 'Сancel account'
   will_paginate:
     previous_label: '<'
     next_label: '>'    
@@ -44,6 +52,7 @@ en:
       edit: 'Edit'
       finish: 'Finish compagny'
       donate: 'Donate'
+      welcome: 'Welcome'
   date:
     formats:
       default: "%Y-%m-%d"
@@ -61,3 +70,6 @@ en:
       - oct.
       - nov.
       - déc.
+  errors:
+    messages:
+      not_saved: 'Saving Error'

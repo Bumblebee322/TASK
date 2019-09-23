@@ -28,6 +28,15 @@ ru:
     donate: 'Пожертвовать' 
     create_company: 'Создать компанию'
     companies_with_tag: 'Компании с тэгом: '
+    welcome: 'Добро пожаловать, '
+    edit_profile: 'Редактировать профиль'
+    tags: 'Теги'
+    characters_minimum: ' символов минимум'
+    comfirm_changes: '(необходимо для подтверждения изменений)'
+    update_account: 'Внести изменения'
+    destroy_account: 'Удалить аккаунт'
+    destroy_comfirm: 'Вы уверены?'
+    cancel_account: 'Удаление аккаунта'
   will_paginate:
     previous_label: '<'
     next_label: '>'
@@ -52,5 +61,7 @@ ru:
       default: "%Y-%m-%d"
       short: "%b %d"
       long: "%B %d, %Y"
-    
+  errors:
+    messages:
+      not_saved: 'Сохранение не удалось'
   

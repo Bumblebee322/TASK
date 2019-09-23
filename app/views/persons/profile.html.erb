@@ -7,18 +7,38 @@
 
 <body class = 'profile_page_body'>
 
-<% if user_signed_in?%>
+<% if current_user or current_user.try(:admin?) %>
+<br><br>
+<h5 align = 'center' >  <%= t('common.welcome')%><b><%= current_user.username%> </b></h5>
+<br><br>
+
+<center>
+
+<%= link_to t('common.edit_profile'), edit_user_registration_path , class: 'btn btn-primary'%>
+<%= link_to t("common.create_company"), new_company_path, class: 'btn btn-primary'%>
 
 
-  <% else %>
-    <h1>
-    You must be logged in to view profile page.<br>
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    </h1> 
-  <br>
-     
+</center>
+
+
+<% else %>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%end%>
-</body>
+</div>
+
+
 
 </html>

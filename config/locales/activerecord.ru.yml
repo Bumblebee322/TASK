@@ -19,7 +19,10 @@ ru:
         email: 'Электронная почта'
         password: 'Пароль'
         remember_me: 'Запомнить меня'
-
+        username: 'Имя пользователя'
+        password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'
+        
     errors:
       messages:
         blank: 'не может быть пустым'
