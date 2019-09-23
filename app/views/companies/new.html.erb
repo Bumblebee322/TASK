@@ -8,8 +8,11 @@
 <%= link_to t('common.back'), companies_path %>
 
   <% else %>
-    <h1>
-    You must be logged in to view this page.<br>
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    </h1> 
+    <h2 align = 'center'>
+    <br>
+    <%= t('common.log_in_view')%>
+    <br>
+    <br>
+    <%= link_to t('common.log_in'), new_user_session_path, :class => 'navbar-link'  , class: 'btn btn-primary' %>
+    </h2> 
 <% end %>

@@ -17,7 +17,40 @@
 <%= link_to t('common.edit_profile'), edit_user_registration_path , class: 'btn btn-primary'%>
 <%= link_to t("common.create_company"), new_company_path, class: 'btn btn-primary'%>
 
+<% @companies.order('updated_at DESC').each do |company| %>
+<% if current_user.id == company.creator_id %>
+<article class = 'company' style = 'border-bottom: 2px solid black;'> 
+    <section class = 'company-head'>
+    <h2><%=  link_to company.title, company_path(company) %></h2> 
+    
+    
+    
+    
+    
+    </section>
+    <small>
+        <time>
+        <%= t('common.creation_date')%>
+        <%= company.created_at.to_date.strftime("%d %B, %Y") %>
+        </time>
+    </small>
+    <section class = 'company-summary'>
+    <%= company.short_discription %>
+    </section>
+     <% if user_signed_in?%>
+        <% if company.creator_id == current_user.id or current_user.admin?%>
+        <%= link_to t('common.edit'), edit_company_path(company) %>
+        <%= link_to t('destroy'), company, method: :delete, data: { confirm: t('common.destroy_comfirm') } %>
+        
+        <%end%>
+     <%end%>
 
+     <section class="footer-summary">
+    <%= raw company.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge badge-primary' }.join(' ') %>
+     </section>
+<%end%>
+</article>
+<%end%>
 </center>
 
 

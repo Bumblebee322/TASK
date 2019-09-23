@@ -21,8 +21,9 @@ en:
       comment: 'Comment'
       add_comment: 'Create comment'
       was_created: 'was created by'
-      add_post: 'Add post'
+      add_post: 'Add news'
       news: 'News'
+      add_news: 'Add news'
       support_us: 'Support us'
       sign_uping: 'Sign up'
       donate: 'donate'
@@ -36,6 +37,10 @@ en:
       destroy_account: 'Destroy account'
       destroy_comfirm: 'Are you sure?'    
       cancel_account: 'Сancel account'
+      log_in_view: 'You must be logged in to view this page.'
+      create_bonus: 'Create bonus'
+      edit_company: 'Edit Compagny'
+      save: 'Save'
   will_paginate:
     previous_label: '<'
     next_label: '>'    
@@ -45,7 +50,7 @@ en:
     index:
       title: 'Compagnies'
     new:
-      title: 'New compagny'
+      title: 'New Compagny'
     show:
       support: 'Support'
       money: 'We have:'
@@ -56,20 +61,19 @@ en:
   date:
     formats:
       default: "%Y-%m-%d"
-    month:
-      - 
-      - jan.
-      - fév.
-      - mar.
-      - avr.
-      - mai
-      - juin
-      - juil.
-      - août
-      - sept.
-      - oct.
-      - nov.
-      - déc.
+    month_names:
+      - January.
+      - February.
+      - March.
+      - April.
+      - May.
+      - June.
+      - July.
+      - August.
+      - September.
+      - October.
+      - November.
+      - December.
   errors:
     messages:
       not_saved: 'Saving Error'

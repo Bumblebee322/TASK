@@ -13,14 +13,9 @@ class CompaniesController < ApplicationController
 
 
   def progress
-      a = (@company.current_sum / @company.goal) * 100
-      if a <= 100
-        return a 
-      else
-        a = 100
-        return a
-      end
-     
+
+      [(@company.current_sum / @company.goal) * 100, 100].min
+        
   end
   helper_method :progress
   # GET /companies/1

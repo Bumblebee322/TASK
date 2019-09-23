@@ -19,7 +19,7 @@
 </h3> 
 <h3>Support for custom sum (+ to bonus donate)</h3>
   <div class="field">
-    <%= form.label :Donate %>
+    <%= form.label :Donate_sum %><br>
     <%= form.text_field :current_donate %>
   </div>
 
@@ -27,7 +27,7 @@
 
 <div class="actions">
 
-    <%= form.submit %>
+    <%= form.submit t('common.donate') , class: 'btn btn-primary' %>
   </div>
   
 <% end %>

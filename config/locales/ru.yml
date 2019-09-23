@@ -37,6 +37,11 @@ ru:
     destroy_account: 'Удалить аккаунт'
     destroy_comfirm: 'Вы уверены?'
     cancel_account: 'Удаление аккаунта'
+    log_in_view: 'Для просмотра этой страницы необходимо войти в аккаунт'
+    add_news: 'Добавить новость'
+    create_bonus: 'Создать бонус'
+    edit_company: 'Изменение компании'
+    save: 'Сохранить'
   will_paginate:
     previous_label: '<'
     next_label: '>'
@@ -55,12 +60,29 @@ ru:
     sessions:
       user:
         signed_in: 'Вход произведён успешно'
+        signed_out: 'Сессия завершена'
+    registrations:
+      user:
+        signed_up_but_unconfirmed: 'Вам необходимо поддтвердить аккаунт. Проверьте указанную почту'
   date:
     order: 'Дата окончания сбора средств'
     formats:
       default: "%Y-%m-%d"
       short: "%b %d"
       long: "%B %d, %Y"
+    month_names:
+      - Январь.
+      - Февраль.
+      - Март.
+      - Апрель.
+      - Май.
+      - Июнь.
+      - Июль.
+      - Август.
+      - Сентябрь.
+      - Октябрь.
+      - Ноябрь.
+      - Декабрь.
   errors:
     messages:
       not_saved: 'Сохранение не удалось'

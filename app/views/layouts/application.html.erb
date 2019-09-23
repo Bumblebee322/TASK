@@ -87,7 +87,7 @@
           <h2><%= t('common.tags')%></h2>
           <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
            <%= link_to tag.name, tag_path(tag.name), class: 'badge badge-primary', style: 'font-size: 15px;' %>
-                  <% end %>
+                  <% end %><br><br>
       </div>
   
 

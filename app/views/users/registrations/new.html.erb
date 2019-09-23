@@ -20,7 +20,7 @@
   <div class="form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> <%= t('common.characters_minimum')%>))</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" , class: 'form-control', style: 'border: 1px solid black;width: 20%;'%>
   </div>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t('common.sign_up'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 

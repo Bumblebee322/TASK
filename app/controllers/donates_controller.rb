@@ -4,10 +4,11 @@ class DonatesController < ApplicationController
         @company = Company.find(params[:company_id])
         @donate = @company.donates.create(donate_params)
         
-        
+        @donate.save
+
         respond_to do |format|
-            if @donate.save
-              format.html { redirect_to @company, notice: 'Comment was successfully created.' }
+            if 
+              format.html { redirect_to @company, notice: 'Bonus was successfully created.' }
               format.json { render :show, status: :created, location: @company }
             else
               format.html { render :new }
@@ -18,9 +19,7 @@ class DonatesController < ApplicationController
     def show
       @company = Company.find(params[:company_id])
       @donate = Donate.find(params[:id])
-      puts(@company.current_sum,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
       @company.current_sum += @donate.cost
-      puts(@company.current_sum,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     end
     
     

@@ -1,26 +1,28 @@
   
 <% if user_signed_in? and current_user.id == @company.creator_id%>
+<br><br><br><br>
+<h1 align = 'center'><%=t('common.edit_company')%></h1>
 <br>
-<h1 >Editing Company</h1>
-
 <%= render 'form', company: @company %>
-
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
 
 <% elsif user_signed_in? and current_user.id != @company.creator_id%>
 <center>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
 
 <%= render 'donate', company: @company %>
 
 </center>
 <% else %>
-  <h1>
-    You must be logged in to view this page.<br>
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    </h1> 
+  <h2 align = 'center'>
+    <br>
+    <%= t('common.log_in_view')%>
+    <br>
+    <br>
+    <%= link_to t('common.log_in'), new_user_session_path, :class => 'navbar-link'  , class: 'btn btn-primary' %>
+    </h2>  
   
 <% end %>
+
+<center>
+<%= link_to t('common.back'), companies_path %>
+</center>

@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_055648) do
+ActiveRecord::Schema.define(version: 2019_09_23_082201) do
 
-  create_table "active_storage_attachments", force: :cascade do |t|
+  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
+  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "admins", force: :cascade do |t|
+  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "average_caches", force: :cascade do |t|
-    t.integer "rater_id"
+  create_table "average_caches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "avg", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -56,49 +56,62 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["rater_id"], name: "index_average_caches_on_rater_id"
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "username"
     t.text "body"
-    t.integer "company_id", null: false
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_comments_on_company_id"
   end
 
-# Could not dump table "companies" because of following StandardError
-#   Unknown type 'real' for column 'goal'
+  create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.string "short_discription"
+    t.text "discription"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "creator_name"
+    t.integer "creator_id"
+    t.integer "rating"
+    t.float "goal", limit: 53
+    t.float "current_sum", limit: 53, default: 0.0
+    t.float "current_donate", limit: 53, default: 0.0
+    t.datetime "deadline"
+  end
 
-# Could not dump table "donates" because of following StandardError
-#   Unknown type 'real' for column 'cost'
+  create_table "donates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.bigint "company_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "cost", limit: 53
+    t.index ["company_id"], name: "index_donates_on_company_id"
+  end
 
-  create_table "news", force: :cascade do |t|
+  create_table "news", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "body"
-    t.integer "company_id", null: false
+    t.bigint "company_id", null: false
     t.string "title", limit: 50, default: "", null: false
     t.index ["company_id"], name: "index_news_on_company_id"
   end
 
-  create_table "overall_averages", force: :cascade do |t|
+  create_table "overall_averages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "overall_avg", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["rateable_type", "rateable_id"], name: "index_overall_averages_on_rateable_type_and_rateable_id"
   end
 
-  create_table "rates", force: :cascade do |t|
-    t.integer "rater_id"
+  create_table "rates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "rater_id"
     t.string "rateable_type"
-    t.integer "rateable_id"
+    t.bigint "rateable_id"
     t.float "stars", null: false
     t.string "dimension"
     t.datetime "created_at", precision: 6, null: false
@@ -108,9 +121,9 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["rater_id"], name: "index_rates_on_rater_id"
   end
 
-  create_table "rating_caches", force: :cascade do |t|
+  create_table "rating_caches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "cacheable_type"
-    t.integer "cacheable_id"
+    t.bigint "cacheable_id"
     t.float "avg", null: false
     t.integer "qty", null: false
     t.string "dimension"
@@ -120,7 +133,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["cacheable_type", "cacheable_id"], name: "index_rating_caches_on_cacheable_type_and_cacheable_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
+  create_table "sessions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "session_id", null: false
     t.text "data"
     t.datetime "created_at", precision: 6, null: false
@@ -129,22 +142,22 @@ ActiveRecord::Schema.define(version: 2019_09_23_055648) do
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
 
-  create_table "taggings", force: :cascade do |t|
-    t.integer "company_id", null: false
-    t.integer "tag_id", null: false
+  create_table "taggings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_taggings_on_company_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

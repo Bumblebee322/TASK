@@ -8,6 +8,14 @@ ru:
 
         
     attributes:
+      donate:
+        Donate_sum: 'Сумма пожертования'
+        title: 'Название'
+        discription: 'Описание'
+        cost: 'Стоимость бонуса'
+      news:
+        title: 'Название'
+        discription: 'Описание'
       company:
         title: 'Название'
         short_discription: 'Краткое описание'
@@ -15,6 +23,7 @@ ru:
         goal: 'Цель'
         deadline: 'Дата окончания сбора средств'
         all_tags: 'Теги'
+        Donate_sum: 'Сумма пожертования'
       user:
         email: 'Электронная почта'
         password: 'Пароль'
